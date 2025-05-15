@@ -7,7 +7,16 @@ export default function DisplayPage() {
   return (
    <>
        <MobileFrame>
-        DisplayPage
+        <div>
+          <div>
+            
+
+
+
+          </div>
+        </div>
+        顯示我的失控可頌
+
       </MobileFrame>
    </>
  

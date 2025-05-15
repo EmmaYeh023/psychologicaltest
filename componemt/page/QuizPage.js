@@ -1,29 +1,57 @@
 'use client';
 import MobileFrame from '@/componemt/layout/MobileFrame';
-import Image from 'next/image';
-import titleImg from '@/public/0.start/title.svg';
-import startBtn from '@/public/0.start/startbtn.png';
-import circleY from '@/public/0.start/blur-circleY.png';
+import { usePsyStore, useQuizStore } from '@/app/store/store.js';
 
-export default function QuizPage({questionIndex, nextStep }) {
+export default function QuestionPage({ questionIndex, nextStep }) {
+  const quizData = useQuizStore((state) => state);
+  const usePsyStore = usePsyStore((state) => state);
+
+  const clickAnswer = function (option) {
+    nextStep();
+    psyData.updateScore(psyData.score + option.value);
+    console.log(option, title, option.value);
+  };
+
+  const getMainColor = function(perfix){
+
+  };
+
   return (
-    <MobileFrame>
-      QuizPage: Q{questionIndex+1}x
+    <>
+      <MobileFrame>
+        {/* 圖片請直接引用 public 路徑 */}
+        <img className="absolute top-0 -translate-y-1/2" src="/1.quiz/blur-circleG.png" alt="blur-circleG" />
 
-      <div className= 'flex justify-center items-center flex-col gap-[60px]'>
-        <Image className=' w-[450px] absolute top-0 -translate-y-1/2 ' src={circleY} alt='circleY' />
-        <Image src={titleImg} alt='title' />
-        <div className= 'text-[#B95F0F] font-[500] text-center text-[14px] leading-loose '>
-            有些人天生酥脆，有些人出爐時就塌了。
-            你努力發酵、翻滾、等待出爐，
-            結果還是變成一坨可頌災難。
-            沒關係，這世界不缺完美麵包，
-            缺的是——像你一樣軟爛卻獨特的存在。
-            現在，就來看看你是什麼等級的失控可頌吧。
+        <div className="flex flex-col items-center gap-[26px]">
+          <img src="/1.quiz/quaso-up1.png" className="w-[88px]" alt="quaso-up1" />
+
+          <div className="text-[#90B62A] border-2 border-[#90B62A] rounded-full w-[48px] h-[48px]
+            flex justify-center items-center font-bold text-xl">
+            Q{questionIndex + 1}
+          </div>
+
+          <div className="text-center font-bold text-3xl b-[60px] ${getMainColor('text')}" >
+            {quizData.quizs[questionIndex + 1].title}
+          </div>
+
+          {quizData?.quizs?.[questionIndex + 1]?.options?.map((option, index) => (
+            <div
+              key={option.title}
+              className="bg-[#BEE351] w-full rounded-full text-white 
+                py-[16px] text-sm flex justify-center items-center font-medium 
+                shadow-[0px_4px_0px_1px_#90B62A] cursor-pointer hover:translate-y-0.5 transition"
+              onClick={() => clickAnswer(option)}
+            >
+              {option.title}
+            </div>
+          ))}
+
+          <img src="/1.quiz/quaso-down1.png" className="w-[88px]" alt="quaso-down1" />
         </div>
-        <Image onClick={nextStep} className= 'w-[160px]' src={startBtn} alt='starBtn' />
-        <Image className=' absolute bottom-0 translate-y-1/2 w-[450px]' src={circleY} alt='circleY' />
-      </div>
-    </MobileFrame>
+
+        <img className="absolute bottom-0 translate-y-1/2" src="/1.quiz/blur-circleG.png" alt="blur-circleG" />
+      </MobileFrame>
+    </>
   );
 }
+

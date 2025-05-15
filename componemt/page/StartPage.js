@@ -22,7 +22,7 @@ export default function StartPage({nextStep}) {
             缺的是——像你一樣軟爛卻獨特的存在。
             現在，就來看看你是什麼等級的失控可頌吧。
           </div>
-          <Image onClick={nextStep} className= 'w-[160px]' src={startBtn} alt='starBtn' />
+          <Image onClick={nextStep} className= 'w-[160px] cursor-pointer hover:translate-y-0.5 transition' src={startBtn} alt='starBtn' />
           <Image className=' absolute bottom-0 translate-y-1/2 w-[450px]' src={circleY} alt='circleY' />
         </div>
       </MobileFrame>

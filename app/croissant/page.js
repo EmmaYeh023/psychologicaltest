@@ -1,11 +1,11 @@
 'use client';
 
-import StartPage from '@/component/page/StartPage';
-import QuestionPage from '@/component/page/QuestionPage';
-import DisplayResultPage from '@/component/page/DisplayResultPage';
-import ResultPage from '@/component/page/ResultPage';
+import StartPage from '@/componemt/page/StartPage';
+import QuestionPage from '@/componemt/page/QuizPage';
+import DisplayPage from '@/componemt/page/DisplayPage';
+import ResultPage from '@/componemt/page/ResultPage';
 import { useState } from 'react';
-import { usePsyStore } from '@/app/store/store'
+import { usePsyStore } from '@/app/store/store';
 
 export default function Croissant() {
 
@@ -44,8 +44,8 @@ export default function Croissant() {
       <div className="w-screen h-screen bg-gray-200 flex justify-center items-center">
         { psyState.state == 0 && <StartPage nextStep={nextStep} />}
         { psyState.state == 1 && <QuestionPage nextStep={nextStep} questionIndex={psyState.questionState} />}
-        { psyState.state == 2 && <DisplayResultPage/>}
-        { psyState.state == 3 && <ResultPage/>}
+        { psyState.state == 2 && <DisplayPage nextStep={nextStep} />}
+        { psyState.state == 3 && <ResultPage />}
         
         {/* <div onClick={prevStep}>上一步</div>
         <div onClick={nextStep}>下一步</div> */}

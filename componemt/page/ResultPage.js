@@ -1,6 +1,7 @@
 'use client';
 import MobileFrame from '@/componemt/layout/MobileFrame'
 import { usePsyStore } from '@/app/store/store';
+import Image from 'next/image';
 import result1 from '@/public/4.result/result-1.png';
 import result2 from '@/public/4.result/result-2.png';
 import result3 from '@/public/4.result/result-3.png';
@@ -32,8 +33,13 @@ export default function ResultPage() {
           <Image src={result3} alt='result-3' />
           }
 
+        <div
+          className={` bg-[#89BCFF] w-full rounded-full text-white 
+          py-[16px] text-sm flex justify-center items-center font-medium 
+          shadow-[0px_4px_0px_1px_#1098EC] cursor-pointer hover:translate-y-0.5 transition`}
+          onClick = {playAgain}
+        > 再玩一次</div>
         
-
         </div>
       </MobileFrame>
    </>

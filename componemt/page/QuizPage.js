@@ -12,20 +12,7 @@ export default function QuestionPage({ questionIndex, nextStep }) {
     console.log(option.title, option.value);
   };
 
-  const getMainColor = function(prefix){
   
-  let colorString = ""
-
-  if(questionIndex == 0){
-    colorString = prefix + "-[#90B62A]";
-  }else if(questionIndex == 1){
-    colorString = prefix + "-[#DD3E3E]";
-  }else{
-    colorString = prefix + "-[#1098EC]";
-  }
-
-    return colorString;
-  };
 
   return (
     <>
@@ -36,12 +23,22 @@ export default function QuestionPage({ questionIndex, nextStep }) {
         <div className="flex flex-col items-center gap-[26px]">
           <img src="/1.quiz/quaso-up1.png" className="w-[88px]" alt="quaso-up1" />
 
-          <div className="text-[#90B62A] border-2 border-[#90B62A] rounded-full w-[48px] h-[48px]
-            flex justify-center items-center font-bold text-xl">
+          <div className={`border-2  rounded-full w-[48px] h-[48px]
+            flex justify-center items-center font-bold text-xl ${ questionIndex === 0
+                ? 'text-[#90B62A] border-[#90B62A]'
+                : questionIndex === 1
+                ? 'text-[#DD3E3E] border-[#DD3E3E'
+                : 'text-[#1098EC] border-[#1098EC' }`}>
             Q{questionIndex + 1}
           </div>
 
-          <div className={`text-center font-bold text-3xl mb-[60px] text-[${getMainColor('text')}] `}>
+          <div className={`text-center font-bold text-3xl mb-[60px] ${
+                questionIndex === 0
+                  ? 'text-[#90B62A]'
+                  : questionIndex === 1
+                  ? 'text-[#DD3E3E]'
+                  : 'text-[#1098EC]'
+              } `}>
             {quizData.quizs[questionIndex + 1].title}
           </div>
 

@@ -34,9 +34,9 @@ export default function ResultPage() {
           }
 
         <div
-          className={` bg-[#89BCFF] w-full rounded-full text-white 
+          className={` bg-[#B65A0F] w-full rounded-full text-white 
           py-[16px] text-sm flex justify-center items-center font-medium 
-          shadow-[0px_4px_0px_1px_#1098EC] cursor-pointer hover:translate-y-0.5 transition`}
+          shadow-[0px_4px_0px_1px_#8D4509] cursor-pointer hover:translate-y-0.5 transition`}
           onClick = {playAgain}
         > 再玩一次</div>
         

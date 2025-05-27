@@ -12,7 +12,7 @@ export default function DisplayPage({nextStep}) {
        <MobileFrame>
       
         <div className= 'flex justify-center items-center flex-col gap-[60px]'>
-        <Image className=' w-[450px] absolute top-0 -translate-y-1/2 ' src={circleY} alt='circleY' />
+        <Image className=' w-[380px] absolute top-0 -translate-y-1/2 ' src={circleY} alt='circleY' />
         <Image src={displayQuaso} alt='displayQuaso' />
        
         <div className={` bg-[#B65A0F] w-full rounded-full text-white 

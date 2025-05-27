@@ -49,18 +49,18 @@ export default function ResultPage() {
           <Image src={result3} alt='result-3' />
           }
           
-          <div className='text-[#B95F0F] font-[500] text-center text-[14px] leading-loose mt-[10px]'>長按或截圖可保存結果</div>
-          <div className="flex flex-row gap-[16px] w-full">
+          <div className='text-[#B95F0F] font-[500] text-center text-[14px] leading-loose mt-[8px]'>長按或截圖可保存結果</div>
+          <div className="flex flex-row gap-[10px] w-full">
             <div
             className={` bg-[#B65A0F] w-full rounded-full text-white 
-            py-[10px] text-sm flex justify-center items-center font-medium 
+            py-[15px] text-sm flex justify-center items-center font-medium 
             shadow-[0px_4px_0px_1px_#8D4509] cursor-pointer hover:translate-y-0.5 transition mt-[30px]`}
             onClick = {playAgain}
           > 再玩一次</div>
             
             <div
             className={` bg-[#B65A0F] w-full rounded-full text-white 
-            py-[16px] text-sm flex justify-center items-center font-medium 
+            py-[15px] text-sm flex justify-center items-center font-medium 
             shadow-[0px_4px_0px_1px_#8D4509] cursor-pointer hover:translate-y-0.5 transition mt-[30px]`}
             onClick = {handleShare}
           > 分享測驗</div>

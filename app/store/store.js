@@ -16,27 +16,27 @@ const usePsyStore = create((set) => ({
 const useQuizStore = create((set) => ({
   quizs: {
     1:{
-      title: "麵包師傅要你「靜置 30 分鐘」，你會怎麼做？",
+      title: "如果你走進一家人氣麵包店，看到架上只剩下三個可頌，你會選哪一個？",
       options:[
-        {title:"乖乖待著… 然後偷偷膨脹三倍大", value:2 },  
-        {title:"等個屁！我已經開始發酵狂飆了", value:3 },  
-        {title:"發…什麼？我忘記了，我睡著了", value:1 }  
+        {title:"最酥脆、層次分明，看起來最完美的那一個", value:1 },  
+        {title:"看起來有點歪但香氣逼人的那一個", value:2 },  
+        {title:"包著巧克力餡的特別版", value:3 }  
       ]
     },
     2:{
-      title: "當你被放進烤箱時，溫度突然升高，你的反應是？",
+      title: "你最喜歡在什麼情境下吃可頌？",
       options:[
-        {title:"啊啊啊啊啊啊！（冒泡炸裂）", value:2 },  
-        {title:"熱熱熱快翻面！我要烤出最酥脆的皮！", value:3 },  
-        {title:"我已經放棄掙扎，來吧命運……", value:1 }  
+        {title:"清晨的陽光下，配著咖啡開始美好的一天", value:1 },  
+        {title:"忙碌中偷閒，站在路邊隨手咬一口", value:2 },  
+        {title:"午後獎勵時光，一邊看劇一邊享受甜點", value:3 }  
       ]
     },
     3:{
-      title: "如果你被顧客挑選時被放回去了，你會？",
+      title: "如如果你是一個可頌內餡，你會是什麼口味？",
       options:[
-        {title:"立刻乾癟五公分，氣到扁掉", value:2 },  
-        {title:"更用力散發麵包香，讓他後悔！", value:3 },  
-        {title:"裝死，假裝自己是牛角麵包", value:1 }  
+        {title:"原味，經典不敗就是我", value:1 },  
+        {title:"鹹奶油火腿，實用派不走浮誇路線", value:2 },  
+        {title:"抹茶或莓果餡，獨特又充滿驚喜", value:3 }  
       ]
     }
   }

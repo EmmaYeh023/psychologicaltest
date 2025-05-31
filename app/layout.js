@@ -22,6 +22,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <audio src="/audio/LeFestin.mp3" autoPlay loop/>
         {children}
       </body>
     </html>

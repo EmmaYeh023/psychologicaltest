@@ -2,10 +2,10 @@
 import MobileFrame from '@/componemt/layout/MobileFrame'
 import { usePsyStore } from '@/app/store/store';
 import Image from 'next/image';
-import result1 from '@/public/4.result/result-1.png';
-import result2 from '@/public/4.result/result-2.png';
-import result3 from '@/public/4.result/result-3.png';
-import circleY from '@/public/0.start/blur-circleY.png';
+import result1 from '@/public/4.result/result1.png';
+import result2 from '@/public/4.result/result2.png';
+import result3 from '@/public/4.result/result3.png';
+import result4 from '@/public/4.result/result4.png';
 
 export default function ResultPage() {
   
@@ -33,20 +33,26 @@ export default function ResultPage() {
   return (
    <>
       <MobileFrame>
-        <div className='z-10 '> 
+      <div className= 'min-h-full w-full bg-gradient-to-b from-[#FFFFFF] to-[#FFF1C4] flex justify-center items-center'>
+          <div className='z-10 p-[50px]'> 
           {
-          psyState.score < 6 && 
-          <Image src={result1} alt='result-1' />
+          (psyState.score >= 5 && psyState.score < 9) && 
+          <Image src={result1} alt='result1' />
           }
 
           {
-          (psyState.score >= 6 && psyState.score < 8) && 
-          <Image src={result2} alt='result-2' />
+          (psyState.score >= 9 && psyState.score < 13) && 
+          <Image src={result2} alt='result2' />
           }
 
           {
-          psyState.score >= 8 && 
-          <Image src={result3} alt='result-3' />
+          (psyState.score >= 13 && psyState.score < 17) && 
+          <Image src={result3} alt='result3' />
+          }
+
+          {
+          (psyState.score >= 17 && psyState.score < 20) && 
+          <Image src={result4} alt='result4' />
           }
           
           <div className='text-[#B95F0F] font-[500] text-center text-[14px] leading-loose mt-[8px]'>長按或截圖可保存結果</div>
@@ -67,7 +73,7 @@ export default function ResultPage() {
           </div>
            
         </div>
-        <Image className=' absolute bottom-0 translate-y-1/2 w-[450px] z-0' src={circleY} alt='circleY' /> 
+      </div>
       </MobileFrame>
    </>
  

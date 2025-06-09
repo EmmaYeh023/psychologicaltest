@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "可頌心理測驗",
-  description: "來看看你是哪一種可頌",
+  title: "法式甜點心理測驗",
+  description: "來看看你是哪一道甜點",
 };
 
 export default function RootLayout({ children }) {

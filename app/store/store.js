@@ -27,7 +27,7 @@ const useQuizStore = create((set) => ({
     2:{
       title: "一個完美的週末午後，你會？",
       options:[
-        {title:"躲進家裡看書或追劇", value:1 },  
+        {title:"躲進家裡睡覺或追劇", value:1 },  
         {title:"和朋友逛市集、拍拍照", value:2 },  
         {title:"隨性散步，看哪裡有趣就去哪裡", value:3 },
         {title:"安排一場美術館或展覽行程", value:4 }  

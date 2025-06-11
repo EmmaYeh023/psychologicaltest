@@ -33,7 +33,7 @@ export default function ResultPage() {
   return (
    <>
       <MobileFrame>
-      <div className= 'min-h-full w-full bg-gradient-to-b from-[#FFFFFF] to-[#FFF1C4] flex justify-center items-center'>
+      <div className= 'min-h-full w-full bg-gradient-to-b from-[#FFFFFF] to-[#FFD9DA] flex justify-center items-center'>
           <div className='z-10 p-[50px]'> 
           {
           (psyState.score >= 5 && psyState.score < 9) && 
@@ -55,19 +55,19 @@ export default function ResultPage() {
           <Image src={result4} alt='result4' />
           }
           
-          <div className='text-[#B95F0F] font-[500] text-center text-[14px] leading-loose mt-[8px]'>長按或截圖可保存結果</div>
+          <div className='text-[#89023E] font-[500] text-center text-[14px] leading-loose mt-[8px]'>長按或截圖可保存結果</div>
           <div className="flex flex-row gap-[10px] w-full">
             <div
-            className={` bg-[#B65A0F] w-full rounded-full text-white 
+            className={` bg-[#EA638C] w-full rounded-full text-white 
             py-[15px] text-sm flex justify-center items-center font-medium 
-            shadow-[0px_4px_0px_1px_#8D4509] cursor-pointer hover:translate-y-0.5 transition mt-[30px]`}
+            shadow-[0px_4px_0px_1px_#89023E] cursor-pointer hover:translate-y-0.5 transition mt-[30px]`}
             onClick = {playAgain}
           > 再玩一次</div>
             
             <div
-            className={` bg-[#B65A0F] w-full rounded-full text-white 
+            className={` bg-[#EA638C] w-full rounded-full text-white 
             py-[15px] text-sm flex justify-center items-center font-medium 
-            shadow-[0px_4px_0px_1px_#8D4509] cursor-pointer hover:translate-y-0.5 transition mt-[30px]`}
+            shadow-[0px_4px_0px_1px_#89023E] cursor-pointer hover:translate-y-0.5 transition mt-[30px]`}
             onClick = {handleShare}
           > 分享測驗</div>
           </div>

@@ -19,11 +19,21 @@ export default function QuestionPage({ questionIndex, nextStep }) {
     < >
       <MobileFrame>
         {/* 圖片請直接引用 public 路徑 */}
-        <div className={`min-h-full w-full flex justify-center items-center bg-gradient-to-b p-[50px] from-[#FFFFFF] to-[#FFD9DA]`}>
+        <div
+            className="min-h-full w-full flex justify-center items-center p-[50px]"
+            style={{
+              backgroundImage: `
+                linear-gradient(to right, rgba(255, 0, 0, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 0, 0, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, #FFFFFF, #FFD9DA)
+              `,
+              backgroundSize: '20px 20px, 20px 20px, cover',
+              backgroundBlendMode: 'normal',
+            }}
+          >
 
           <div className="flex flex-col items-center gap-[30px] z-10">
             
-
             <div className={`border-2  rounded-full w-[48px] h-[48px] mt-[15px]
               flex justify-center items-center font-bold text-xl text-[#FFFFFF] border-[#EA638C] bg-[#EA638C]`}>
               Q{questionIndex + 1}

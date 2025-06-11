@@ -3,7 +3,7 @@ import MobileFrame from '@/componemt/layout/MobileFrame'
 import Image from 'next/image';
 import title from '@/public/0.start/title.png';
 import titleImg from '@/public/0.start/startImg.png';
-import startBtn from '@/public/0.start/startBtn.png';
+
 
 
 export default function StartPage({nextStep}) {
@@ -16,7 +16,12 @@ export default function StartPage({nextStep}) {
           <div className= 'flex justify-center items-center flex-col gap-[50px] '>
             <Image src={title} alt='title' width={260}/>
             <Image src={titleImg} alt='titleI' width={200}/>
-            <Image onClick={nextStep} className= 'w-[200px] cursor-pointer hover:translate-y-0.5 transition z-10' src={startBtn} alt='starBtn' />
+            <div
+            className={` bg-[#EA638C] w-[200px] rounded-full text-white 
+            py-[15px] text-lg flex justify-center items-center font-bold 
+            shadow-[0px_4px_0px_1px_#89023E] cursor-pointer hover:translate-y-0.5 transition mt-[30px]`}
+            onClick = {nextStep}
+          > START</div>
           </div>
         </div>
       </MobileFrame>

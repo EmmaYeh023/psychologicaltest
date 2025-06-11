@@ -51,7 +51,7 @@ export default function ResultPage() {
           }
 
           {
-          (psyState.score >= 17 && psyState.score < 20) && 
+          (psyState.score >= 17 && psyState.score <= 20) && 
           <Image src={result4} alt='result4' />
           }
           
